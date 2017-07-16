@@ -26,5 +26,10 @@ record = enron_data["SKILLING JEFFREY K"].keys()
 print "The number of features is: %d" % len(record)
 
 pprint.pprint(enron_data)
+#print enron_data["ALLEN PHILLIP K"]["poi"]
 
-#print "The number of features is " , len(enron_data.values())
+poi = []
+for v in enron_data.values():
+    poi.append(v["poi"])
+    
+print poi.count(True)
