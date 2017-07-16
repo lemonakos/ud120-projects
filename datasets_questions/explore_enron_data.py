@@ -16,7 +16,7 @@
 """
 
 import pickle
-
+import pprint
 enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "r"))
 
 print "The size of the dataset is: %d" % len(enron_data)
@@ -24,5 +24,7 @@ print "The size of the dataset is: %d" % len(enron_data)
 record = enron_data["SKILLING JEFFREY K"].keys()
 
 print "The number of features is: %d" % len(record)
+
+pprint.pprint(enron_data)
 
 #print "The number of features is " , len(enron_data.values())
